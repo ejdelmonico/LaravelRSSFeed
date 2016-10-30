@@ -3,7 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-scrutinizer]][link-scrutinizer]
 [![StyleCI Status][ico-styleci]][link-styleci]
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -16,7 +16,7 @@ PSRs you support to avoid any confusion with users and contributors.
 Via Composer
 
 ``` bash
-$ composer require ejdelmonico/Laravel RSS Feed Parser
+$ composer require ejdelmonico/LaravelRSSFeed
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [link-packagist]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
 [link-travis]: https://travis-ci.org/ejdelmonico/LaravelRSSFeed
-[link-scrutinizer]: https://scrutinizer-ci.com/g/ejdelmonico/LaravelRSSFeed/code-structure
+[link-scrutinizer]: https://scrutinizer-ci.com/g/ejdelmonico/LaravelRSSFeed
 [link-styleci]: https://styleci.io/repos/72316992
 [link-downloads]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
 [link-author]: https://github.com/ejdelmonico

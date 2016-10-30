@@ -4,6 +4,8 @@ php:
   - 7.0
   - 7.1
 
+sudo: false
+
 env:
   matrix:
     - COMPOSER_FLAGS="--prefer-lowest"
@@ -12,3 +14,6 @@ env:
 before_script:
   - travis_retry composer self-update
   - travis_wait composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+
+script:
+  - vendor/bin/phpunit --verbose
