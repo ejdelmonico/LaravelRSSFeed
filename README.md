@@ -53,17 +53,17 @@ If you discover any security related issues, please email ejdelmonico@gmail.com 
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/ejdelmonico/Laravel-RSS-Feed-Parser.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/ejdelmonico/Laravel-RSS-Feed-Parser/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/ejdelmonico/Laravel-RSS-Feed-Parser.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/ejdelmonico/Laravel-RSS-Feed-Parser.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/ejdelmonico/Laravel-RSS-Feed-Parser.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/ejdelmonico/LaravelRSSFeed/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/72316992/shield?branch=master
+[ico-downloads]: https://img.shields.io/packagist/dt/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/ejdelmonico/Laravel-RSS-Feed-Parser
-[link-travis]: https://travis-ci.org/ejdelmonico/Laravel-RSS-Feed-Parser
-[link-scrutinizer]: https://scrutinizer-ci.com/g/ejdelmonico/Laravel-RSS-Feed-Parser/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/ejdelmonico/Laravel-RSS-Feed-Parser
-[link-downloads]: https://packagist.org/packages/ejdelmonico/Laravel-RSS-Feed-Parser
+[link-packagist]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
+[link-travis]: https://travis-ci.org/ejdelmonico/LaravelRSSFeed
+[link-scrutinizer]: https://scrutinizer-ci.com/g/ejdelmonico/LaravelRSSFeed/code-structure
+[link-styleci]: https://styleci.io/repos/72316992
+[link-downloads]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
 [link-author]: https://github.com/ejdelmonico
 [link-contributors]: ../../contributors
