@@ -4,7 +4,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![StyleCI Status][ico-styleci]][link-styleci]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
