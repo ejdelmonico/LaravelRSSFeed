@@ -8,5 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'SimplePie' => array($vendorDir . '/simplepie/simplepie/library'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
+    'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
+    'JakubOnderka\\PhpConsoleColor' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
+    'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
 );

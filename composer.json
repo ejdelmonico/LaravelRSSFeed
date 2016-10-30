@@ -17,13 +17,14 @@
         }
     ],
     "require": {
-        "illuminate/support": "~5.1",
-        "php" : "~5.6|~7.0",
+        "illuminate/support": "~5.3.0",
+        "illuminate/contracts": "~5.3.0",
+        "php" : "^7.0",
         "simplepie/simplepie": "1.4.*"
     },
     "require-dev": {
-        "phpunit/phpunit" : "~4.0||~5.0",
-        "squizlabs/php_codesniffer": "^2.3"
+        "phpunit/phpunit" : "5.*",
+        "orchestra/testbench": "~3.3.0"
     },
     "autoload": {
         "psr-4": {
@@ -36,9 +37,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+        "test": "vendor/bin/phpunit"
     },
     "extra": {
         "branch-alias": {
