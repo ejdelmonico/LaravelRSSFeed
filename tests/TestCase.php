@@ -19,14 +19,14 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelRSSFeedServiceProvider::class
+            LaravelRSSFeedServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-          'Feed' => FeedFacade::class
+          'Feed' => FeedFacade::class,
         ];
     }
 

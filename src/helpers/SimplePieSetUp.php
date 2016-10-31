@@ -5,7 +5,7 @@ namespace ejdelmonico\LaravelRSSFeed\helpers;
 use SimplePie;
 
 /**
- * SimplePie SetUp
+ * SimplePie SetUp.
  */
 class SimplePieSetUp
 {

@@ -3,7 +3,6 @@
 namespace ejdelmonico\LaravelRSSFeed;
 
 use Illuminate\Support\ServiceProvider;
-use ejdelmonico\LaravelRSSFeed\Feed;
 
 class LaravelRSSFeedServiceProvider extends ServiceProvider
 {

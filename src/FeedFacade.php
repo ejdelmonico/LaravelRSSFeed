@@ -5,7 +5,7 @@ namespace ejdelmonico\LaravelRSSFeed;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class FeedFacade
+ * Class FeedFacade.
  */
 class FeedFacade extends Facade
 {
