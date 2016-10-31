@@ -1,17 +1,34 @@
 <?php
+
 namespace ejdelmonico\LaravelRSSFeed\tests;
 
-/**
- * Copyright (c) 2016. E J Del Monico and Del Monico Web Services LLC. All rights reserved.
- */
-
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider;
 use ejdelmonico\LaravelRSSFeed\Feed;
+use ejdelmonico\LaravelRSSFeed\FeedFacade;
+use ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
-abstract class TestCase extends OrchestraTestCase
+abstract class TestCase extends BaseTestCase
 {
     protected $feed;
+
+    /**
+     * @param \Illuminate\Foundation\Application $app
+     *
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [
+            LaravelRSSFeedServiceProvider::class
+        ];
+    }
+
+    protected function getPackageAliases($app)
+    {
+        return [
+          'Feed' => FeedFacade::class
+        ];
+    }
 
     public function setUp()
     {
@@ -19,18 +36,4 @@ abstract class TestCase extends OrchestraTestCase
 
         $this->feed = new Feed(['cache.enabled' => false]);
     }
-
-    public function tearDown()
-    {
-        parent::tearDown();
-    }
-
-    protected function getPackageProviders($app)
-    {
-        return [
-            LaravelRSSFeedServiceProvider::class,
-        ];
-    }
-
-
 }

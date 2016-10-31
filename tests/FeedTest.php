@@ -1,19 +1,15 @@
 <?php
-namespace packages\ejdelmonico\LaravelRSSFeed\tests;
 
-/**
- * Copyright (c) 2016. E J Del Monico and Del Monico Web Services LLC. All rights reserved.
- */
+namespace ejdelmonico\LaravelRSSFeed\tests;
 
-use ejdelmonico\LaravelRSSFeed\tests\TestCase;
-use ejdelmonico\LaravelRSSFeed\Feed;
-
-/**
- * Class FeedTest
- *
- * @package \packages\ejdelmonico\LaravelRSSFeed\tests
- */
 class FeedTest extends TestCase
 {
+    public function testFeedByUrl()
+    {
+        $url = 'https://blog.errordetective.com/rss/';
+        $feeder = $this->feed->makeRequest($url);
 
+        $this->assertNotNull($feeder);
+        $this->assertInstanceOf('ejdelmonico\LaravelRSSFeed\Feed', $this->feed);
+    }
 }

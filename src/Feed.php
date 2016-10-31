@@ -22,8 +22,8 @@ class Feed
         $this->feeder = new SimplePieSetUp();
         $this->feeder->loadConfig($this->config);
         $this->feeder->setRSSFeedUrl($url);
-        $this->feeder->handleContentType();
         $this->feeder->init();
+        $this->feeder->handleContentType();
 
         return $this->feeder;
     }

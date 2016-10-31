@@ -1,7 +1,4 @@
 <?php
-/**
- * Copyright (c) 2016. E J Del Monico and Del Monico Web Services LLC. All rights reserved.
- */
 
 return [
     /*
