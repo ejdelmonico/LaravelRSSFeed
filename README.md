@@ -8,33 +8,50 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This project is crafted to be as standard as possible for its small usage in Laravel 5 applications. It was inspired by a need to pull in blog posts for use in Laravel Blade templates.
 
-## Install
+## Installation
 
-Via Composer
+The LaravelRSSFeed package is installed by requiring the package in your `composer.json`. You can either do it via composer install
+```
+composer require ejdelmonico/LaravelRSSFeed
+```
+or by simply including it.
+```
+{
+  "require": {
+    "ejdelmonico/LaravelRSSFeed": "1.*"
+  }
+}
+```
 
-``` bash
-$ composer require ejdelmonico/LaravelRSSFeed
+## Configuration
+
+To use the package, you must register the service provider:
+```
+// In config/app.php
+
+'providers' => [
+  // ...
+  ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider::class,
+],
+
+'aliases' => [
+  // ...
+  'Feed' => ejdelmonico\LaravelRSSFeed\FeedFacade::class,
+],
 ```
 
 ## Usage
 
-``` php
-$skeleton = new ejdelmonico\LaravelRSSFeed();
-echo $skeleton->echoPhrase('Hello, League!');
 ```
+php artisan vendor:publish --provider="ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider" --tag=config
+```
+This section is still in development.
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
