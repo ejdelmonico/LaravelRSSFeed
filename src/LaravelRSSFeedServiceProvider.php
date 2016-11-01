@@ -6,12 +6,15 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelRSSFeedServiceProvider extends ServiceProvider
 {
-    const VERSION = '1.0.0';
-
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
     protected $defer = true;
 
     /**
-     * Perform post-registration booting of services.
+     * Bootstrap the package events.
      *
      * @return void
      */
@@ -26,7 +29,7 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register any package services.
+     * Register the service provider.
      *
      * @return void
      */
@@ -34,7 +37,7 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/feed.php', 'feed');
 
-        $this->app->bind(
+        $this->app->singleton(
             Feed::class,
             function () {
                 $config = config('feed');
