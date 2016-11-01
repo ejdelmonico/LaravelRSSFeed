@@ -8,7 +8,7 @@ class FeedTest extends TestCase
 {
     protected $config;
     protected $feeder;
-    
+
     public function testFeedByUrl()
     {
         $url = 'https://blog.errordetective.com/rss/';
