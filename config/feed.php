@@ -9,7 +9,7 @@ return [
     | Filesystem path to use for caching.
     |
     */
-    'cache.location'              => storage_path().'/framework/cache',
+    'cache_location'              => storage_path().'/framework/cache',
 
     /*
     |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ return [
     | Cache (2 Days or whatever you decide), in seconds.
     |
     */
-    'cache.life'                  => env('FEED_CACHE_LIFE', 17280),
+    'cache_life'                  => env('FEED_CACHE_LIFE', 17280),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     | Whether cache is enabled.
     |
     */
-    'cache.enabled'               => env('FEED_CACHE_ENABLED', true),
+    'enable_cache'               => env('FEED_CACHE_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ return [
     | Set the HTML tags to strip.
     |
     */
-    'strip_htmltags.tags'         => [
+    'strip_htmltags'         => [
         'base',
         'blink',
         'body',
@@ -99,7 +99,7 @@ return [
     | Set the HTML tags to strip.
     |
     */
-    'strip_attributes.tags'       => [
+    'strip_attributes'       => [
         'bgsound',
         'class',
         'expr',
@@ -124,7 +124,7 @@ return [
     | Set whether to enable force feed.
     |
     */
-    'force_feed.enabled'          => env('FORCE_FEED_ENABLED', false),
+    'force_feed'          => env('FORCE_FEED', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -134,7 +134,7 @@ return [
     | Set whether to reverse the order by date.
     |
     */
-    'order_by_date.enabled'       => env('ORDER_BY_DATE_ENABLED', true),
+    'order_by_date'       => env('ORDER_BY_DATE', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -144,5 +144,15 @@ return [
     | Set whether to strip HTML comments.
     |
     */
-    'strip_html_comments.enabled' => env('STRIP_HTML_COMMENTS_ENABLED', true),
+    'strip_comments' => env('STRIP_HTML_COMMENTS', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Set Request Timeout
+    |--------------------------------------------------------------------------
+    |
+    | Set the feed request timeout.
+    |
+    */
+    'set_timeout' => env('SET_REQUEST_TIMEOUT', 60),
 ];

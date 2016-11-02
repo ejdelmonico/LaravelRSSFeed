@@ -19,21 +19,22 @@ class SimplePieSetUp
     /**
      * Load the config array.
      *
-     * @param array $config
+     * @param $config
      *
      * @return \SimplePie
      */
-    public function loadConfig()
+    public function loadConfig($config)
     {
-        $this->feed->set_cache_location(config('feed.cache.location'));
-        $this->feed->set_cache_duration(config('cache.life'));
-        $this->feed->enable_cache(config('cache.enabled'));
+        $this->feed->set_cache_location(config('cache_location'));
+        $this->feed->set_cache_duration(config('cache_life'));
+        $this->feed->enable_cache(config('enable_cache'));
         $this->feed->set_item_limit(config('item_limit'));
-        $this->feed->strip_htmltags(config('strip_htmltags.tags'));
-        $this->feed->strip_attributes(config('strip_attributes.tags'));
-        $this->feed->force_feed(config('force_feed.enabled'));
-        $this->feed->enable_order_by_date(config('order_by_date.enabled'));
-        $this->feed->strip_comments(config('strip_html_comments.enabled'));
+        $this->feed->strip_htmltags(config('strip_htmltags'));
+        $this->feed->strip_attributes(config('strip_attributes'));
+        $this->feed->force_feed(config('force_feed'));
+        $this->feed->enable_order_by_date(config('order_by_date'));
+        $this->feed->strip_comments(config('strip_comments'));
+        $this->feed->set_timeout(config('set_timeout'));
 
         return $this->feed;
     }
