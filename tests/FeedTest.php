@@ -20,7 +20,7 @@ class FeedTest extends TestCase
 
     public function testLoadConfig()
     {
-        $this->config = file('../config/feed.php');
+        $this->config = file(__DIR__.'/../config/feed.php');
         $this->feeder = new SimplePieSetUp();
         $settings = $this->feeder->loadConfig($this->config);
 

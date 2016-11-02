@@ -3,6 +3,11 @@ filter:
       - vendor/*
       - tests/*
 
+build:
+  environment:
+    php:
+      version: 7.0.6
+
 checks:
     php:
         remove_extra_empty_lines: true

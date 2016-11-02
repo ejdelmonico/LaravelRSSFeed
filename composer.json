@@ -1,6 +1,6 @@
 {
     "name": "ejdelmonico/laravel-rss-feed",
-    "type": "library",
+    "type": "package",
     "description": "A simple Laravel 5 wrapper around SimplePie to pull in RSS feeds",
     "keywords": [
         "ejdelmonico",
@@ -17,6 +17,7 @@
             "role": "Developer"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "illuminate/support": "~5.3.0",
         "illuminate/contracts": "~5.3.0",
