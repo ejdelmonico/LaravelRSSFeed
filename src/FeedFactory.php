@@ -4,7 +4,7 @@ namespace ejdelmonico\LaravelRSSFeed;
 
 use ejdelmonico\LaravelRSSFeed\helpers\SimplePieSetUp;
 
-class Feed
+class FeedFactory
 {
     protected $config;
     protected $feeder;
@@ -17,6 +17,11 @@ class Feed
         $this->config = $config;
     }
 
+    /**
+     * @param $url
+     *
+     * @return \ejdelmonico\LaravelRSSFeed\helpers\SimplePieSetUp
+     */
     public function makeRequest($url)
     {
         $this->feeder = new SimplePieSetUp();

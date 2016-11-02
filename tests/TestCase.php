@@ -2,7 +2,7 @@
 
 namespace ejdelmonico\LaravelRSSFeed\tests;
 
-use ejdelmonico\LaravelRSSFeed\Feed;
+use ejdelmonico\LaravelRSSFeed\FeedFactory;
 use ejdelmonico\LaravelRSSFeed\FeedFacade;
 use ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
@@ -34,6 +34,6 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->feed = new Feed(['cache.enabled' => false]);
+        $this->feed = new FeedFactory(['cache.enabled' => false]);
     }
 }

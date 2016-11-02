@@ -15,7 +15,7 @@ class FeedTest extends TestCase
         $feed = $this->feed->makeRequest($url);
 
         $this->assertNotNull($feed);
-        $this->assertInstanceOf('ejdelmonico\LaravelRSSFeed\Feed', $this->feed);
+        $this->assertInstanceOf('ejdelmonico\LaravelRSSFeed\FeedFactory', $this->feed);
     }
 
     public function testLoadConfig()

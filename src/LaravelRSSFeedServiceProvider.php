@@ -26,6 +26,8 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
             ],
             'config'
         );
+
+        $this->mergeConfigFrom(__DIR__.'/../config/feed.php', 'feed');
     }
 
     /**
@@ -35,10 +37,8 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/feed.php', 'feed');
-
         $this->app->singleton(
-            Feed::class,
+            'feed',
             function () {
                 $config = config('feed');
 
@@ -49,11 +49,11 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
                     );
                 }
 
-                return new Feed($config);
+                return new FeedFactory($config);
             }
         );
 
-        $this->app->alias(Feed::class, 'feed');
+        $this->app->alias('feed', FeedFactory::class);
     }
 
     /**
@@ -63,6 +63,6 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['feed', Feed::class];
+        return ['feed', FeedFactory::class];
     }
 }
