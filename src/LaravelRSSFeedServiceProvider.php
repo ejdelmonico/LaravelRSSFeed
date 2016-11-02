@@ -63,6 +63,6 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['feed'];
+        return ['feed', Feed::class];
     }
 }

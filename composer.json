@@ -4,7 +4,8 @@
     "description": "A simple Laravel 5 wrapper around SimplePie to pull in RSS feeds",
     "keywords": [
         "ejdelmonico",
-        "LaravelRSSFeed"
+        "Laravel",
+        "SimplePie"
     ],
     "homepage": "https://github.com/ejdelmonico/LaravelRSSFeed",
     "license": "MIT",
