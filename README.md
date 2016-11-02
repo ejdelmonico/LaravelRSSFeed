@@ -14,13 +14,13 @@ This project is crafted for usage in Laravel 5 applications. It was inspired by 
 
 The LaravelRSSFeed package is installed by requiring the package in your `composer.json`. You can either do it via composer install
 ```
-composer require ejdelmonico/LaravelRSSFeed
+composer require ejdelmonico/laravel-rss-feed
 ```
 or by simply including it.
 ```
 {
   "require": {
-    "ejdelmonico/LaravelRSSFeed": "1.*"
+    "ejdelmonico/laravel-rss-feed": "1.*"
   }
 }
 ```
@@ -70,17 +70,17 @@ If you discover any security related issues, please email ejdelmonico@gmail.com 
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/ejdelmonico/laravel-rss-feed.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/ejdelmonico/LaravelRSSFeed/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/g/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/72316992/shield?style=flat
-[ico-downloads]: https://img.shields.io/packagist/dt/ejdelmonico/LaravelRSSFeed.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/ejdelmonico/laravel-rss-feed.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
+[link-packagist]: https://packagist.org/packages/ejdelmonico/laravel-rss-feed
 [link-travis]: https://travis-ci.org/ejdelmonico/LaravelRSSFeed
 [link-scrutinizer]: https://scrutinizer-ci.com/g/ejdelmonico/LaravelRSSFeed/?branch=master
 [link-styleci]: https://styleci.io/repos/72316992?style=flat
-[link-downloads]: https://packagist.org/packages/ejdelmonico/LaravelRSSFeed
+[link-downloads]: https://packagist.org/packages/ejdelmonico/laravel-rss-feed
 [link-author]: https://github.com/ejdelmonico
 [link-contributors]: ../../contributors
