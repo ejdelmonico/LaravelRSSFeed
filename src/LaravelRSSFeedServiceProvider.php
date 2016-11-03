@@ -12,6 +12,7 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = true;
+    protected $source;
 
     /**
      * Bootstrap the package events.
@@ -20,14 +21,14 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $source = realpath(__DIR__.'/../config/feed.php');
+
         $this->publishes(
             [
-                __DIR__.'/../config/feed.php' => config_path('feed.php'),
+                $source => config_path('feed.php'),
             ],
             'config'
         );
-
-        $this->mergeConfigFrom(__DIR__.'/../config/feed.php', 'feed');
     }
 
     /**
@@ -37,6 +38,9 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $source = realpath(__DIR__.'/../config/feed.php');
+        $this->mergeConfigFrom($source, 'feed');
+
         $this->app->singleton(
             'feed',
             function () {

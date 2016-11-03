@@ -9,7 +9,7 @@ use SimplePie;
  */
 class SimplePieSetUp
 {
-    protected $feed;
+    public $feed;
 
     public function __construct()
     {
@@ -19,22 +19,22 @@ class SimplePieSetUp
     /**
      * Load the config array.
      *
-     * @param $config
+     * @param array $config
      *
      * @return \SimplePie
      */
-    public function loadConfig($config)
+    public function loadConfig(array $config)
     {
-        $this->feed->set_cache_location(config('cache_location'));
-        $this->feed->set_cache_duration(config('cache_life'));
-        $this->feed->enable_cache(config('enable_cache'));
-        $this->feed->set_item_limit(config('item_limit'));
-        $this->feed->strip_htmltags(config('strip_htmltags'));
-        $this->feed->strip_attributes(config('strip_attributes'));
-        $this->feed->force_feed(config('force_feed'));
-        $this->feed->enable_order_by_date(config('order_by_date'));
-        $this->feed->strip_comments(config('strip_comments'));
-        $this->feed->set_timeout(config('set_timeout'));
+        $this->feed->set_cache_location($config['cache_location']);
+        $this->feed->set_cache_duration($config['cache_life']);
+        $this->feed->enable_cache($config['enable_cache']);
+        $this->feed->set_item_limit($config['item_limit']);
+        $this->feed->strip_htmltags($config['strip_htmltags']);
+        $this->feed->strip_attributes($config['strip_attributes']);
+        $this->feed->force_feed($config['force_feed']);
+        $this->feed->enable_order_by_date($config['order_by_date']);
+        $this->feed->strip_comments($config['strip_comments']);
+        $this->feed->set_timeout($config['set_timeout']);
 
         return $this->feed;
     }

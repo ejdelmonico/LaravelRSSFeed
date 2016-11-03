@@ -6,7 +6,7 @@ use ejdelmonico\LaravelRSSFeed\helpers\SimplePieSetUp;
 
 class FeedFactory
 {
-    protected $config;
+    public $config;
     protected $feeder;
 
     /**
