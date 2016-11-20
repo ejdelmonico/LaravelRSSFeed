@@ -12,20 +12,17 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = true;
-    protected $source;
 
     /**
      * Bootstrap the package events.
-     *
-     * @return void
      */
     public function boot()
     {
-        $source = realpath(__DIR__.'/../config/feed.php');
+        $configPath = __DIR__.'/../config/feed.php';
 
         $this->publishes(
             [
-                $source => config_path('feed.php'),
+                $configPath => $this->getConfigPath(),
             ],
             'config'
         );
@@ -33,20 +30,18 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
-        $source = realpath(__DIR__.'/../config/feed.php');
-        $this->mergeConfigFrom($source, 'feed');
+        $configPath = __DIR__.'/../config/feed.php';
+        $this->mergeConfigFrom($configPath, 'feed');
 
         $this->app->singleton(
             'feed',
             function () {
                 $config = config('feed');
 
-                if (! $config) {
+                if (!$config) {
                     throw new \RuntimeException(
                         'Configuration not available. Run `php artisan vendor:publish '
                         .'--provider="ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider" --tag=config`'
@@ -67,6 +62,16 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['feed', FeedFactory::class];
+        return ['feed'];
+    }
+
+    /**
+     * Get the config path.
+     *
+     * @return string
+     */
+    protected function getConfigPath()
+    {
+        return config_path('feed.php');
     }
 }

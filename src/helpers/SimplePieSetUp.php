@@ -9,8 +9,11 @@ use SimplePie;
  */
 class SimplePieSetUp
 {
-    public $feed;
+    protected $feed;
 
+    /**
+     * SimplePieSetUp constructor.
+     */
     public function __construct()
     {
         $this->feed = new SimplePie();

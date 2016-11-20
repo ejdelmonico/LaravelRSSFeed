@@ -6,8 +6,8 @@ use ejdelmonico\LaravelRSSFeed\helpers\SimplePieSetUp;
 
 class FeedTest extends TestCase
 {
-    public $config;
-    public $feeder;
+//    public $config;
+//    public $feeder;
 
     public function testFeedByUrl()
     {

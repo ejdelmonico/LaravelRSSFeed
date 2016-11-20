@@ -6,14 +6,20 @@ use ejdelmonico\LaravelRSSFeed\helpers\SimplePieSetUp;
 
 class FeedFactory
 {
-    public $config;
+    /** @var array */
+    protected $config;
+
+    /** @var object */
     protected $feeder;
 
     /**
-     * Create a new Feed Instance.
+     * Load the config.
+     *
+     * @var array
      */
-    public function __construct($config)
+    public function __construct(array $config)
     {
+        /* @var array $config */
         $this->config = $config;
     }
 
@@ -24,7 +30,10 @@ class FeedFactory
      */
     public function makeRequest($url)
     {
+        /* @var object $this->feeder */
         $this->feeder = new SimplePieSetUp();
+
+        /* add required options */
         $this->feeder->loadConfig($this->config);
         $this->feeder->setRSSFeedUrl($url);
         $this->feeder->init();

@@ -47,7 +47,19 @@ To use the package, you must register the service provider:
 ```
 php artisan vendor:publish --provider="ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider" --tag=config
 ```
-This section is still in development.
+Here is a simple example:
+```
+Route::get('feed', function () {
+    $url = 'https://blog.errordetective.com/rss/';
+    $rss = Feed::makeRequest($url);
+    $data = array(
+        'title' => $rss->feed->get_title(),
+        'permalink' => $rss->feed->get_permalink(),
+        'items' => $rss->feed->get_items(),
+    );
+    return view('pages.feed', $data);
+});
+```
 
 ## Change log
 

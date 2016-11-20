@@ -9,7 +9,7 @@ return [
     | Filesystem path to use for caching.
     |
     */
-    'cache_location'           => storage_path().'/framework/cache',
+    'cache_location' => storage_path().'/framework/cache',
 
     /*
     |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ return [
     | Cache (2 Days or whatever you decide), in seconds.
     |
     */
-    'cache_life'               => env('FEED_CACHE_LIFE', 17280),
+    'cache_life' => env('FEED_CACHE_LIFE', 17280),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     | Whether cache is enabled.
     |
     */
-    'enable_cache'             => env('FEED_CACHE_ENABLED', true),
+    'enable_cache' => env('FEED_CACHE_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     | Set the number of items to retrieve.
     |
     */
-    'item_limit'               => env('FEED_ITEM_LIMIT', 3),
+    'item_limit' => env('FEED_ITEM_LIMIT', 3),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return [
     | Set whether to strip out HTML tags.
     |
     */
-    'strip_htmltags.enabled'   => env('STRIP_HTMLTAGS_ENABLED', true),
+    'strip_htmltags.enabled' => env('STRIP_HTMLTAGS_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ return [
     | Set the HTML tags to strip.
     |
     */
-    'strip_htmltags'           => [
+    'strip_htmltags' => [
         'base',
         'blink',
         'body',
@@ -99,7 +99,7 @@ return [
     | Set the HTML tags to strip.
     |
     */
-    'strip_attributes'         => [
+    'strip_attributes' => [
         'bgsound',
         'class',
         'expr',
@@ -124,7 +124,7 @@ return [
     | Set whether to enable force feed.
     |
     */
-    'force_feed'               => env('FORCE_FEED', false),
+    'force_feed' => env('FORCE_FEED', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -134,7 +134,7 @@ return [
     | Set whether to reverse the order by date.
     |
     */
-    'order_by_date'            => env('ORDER_BY_DATE', true),
+    'order_by_date' => env('ORDER_BY_DATE', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -144,7 +144,7 @@ return [
     | Set whether to strip HTML comments.
     |
     */
-    'strip_comments'           => env('STRIP_HTML_COMMENTS', false),
+    'strip_comments' => env('STRIP_HTML_COMMENTS', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,5 +154,5 @@ return [
     | Set the feed request timeout.
     |
     */
-    'set_timeout'              => env('SET_REQUEST_TIMEOUT', 30),
+    'set_timeout' => env('SET_REQUEST_TIMEOUT', 30),
 ];
