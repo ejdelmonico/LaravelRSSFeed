@@ -19,7 +19,6 @@ class SimplePieSetUp
         $this->feed = new SimplePie();
     }
 
-
     /**
      * Load the config array.
      *

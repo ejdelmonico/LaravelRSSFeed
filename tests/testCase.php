@@ -1,4 +1,5 @@
 <?php
+
 namespace ejdelmonico\LaravelRSSFeed\tests;
 
 use ejdelmonico\LaravelRSSFeed\FeedFactory;
