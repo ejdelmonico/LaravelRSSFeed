@@ -8,7 +8,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
-This project is crafted for usage in Laravel 5 applications. It was inspired by a need to pull in blog posts from a url to use in Laravel Blade templates.
+This project is crafted for usage in Laravel 5 applications using >= PHP 7. It was inspired by a need to pull in blog posts from a single url to use in Laravel Blade templates.
 
 ## Installation
 
