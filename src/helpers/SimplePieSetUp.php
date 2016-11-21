@@ -9,7 +9,7 @@ use SimplePie;
  */
 class SimplePieSetUp
 {
-    protected $feed;
+    public $feed;
 
     /**
      * SimplePieSetUp constructor.

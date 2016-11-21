@@ -41,7 +41,7 @@ class LaravelRSSFeedServiceProvider extends ServiceProvider
             function () {
                 $config = config('feed');
 
-                if (! $config) {
+                if (!$config) {
                     throw new \RuntimeException(
                         'Configuration not available. Run `php artisan vendor:publish '
                         .'--provider="ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider" --tag=config`'
