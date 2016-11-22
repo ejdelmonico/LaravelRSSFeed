@@ -47,8 +47,14 @@ To use the package, you must register the service provider:
 ```
 php artisan vendor:publish --provider="ejdelmonico\LaravelRSSFeed\LaravelRSSFeedServiceProvider" --tag=config
 ```
-Here is a simple example:
+Here is a simple example to get blog posts from a single feed. You can use the get_items() method to refine the number of posts to process. The function signature is
 ```
+get_items($start, $max)
+```
+Example:
+```
+use Feed;
+
 Route::get('feed', function () {
     $url = 'https://blog.errordetective.com/rss/';
     $rss = Feed::makeRequest($url);
